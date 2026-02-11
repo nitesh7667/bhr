@@ -11,10 +11,10 @@ export default function GalleryPage() {
 
   const images = [
     {
-      title: "Annual Sports Day",
-      category: "Events",
-      size: "large",
-      src: "https://images.unsplash.com/photo-1577896334626-90ad4025f385?q=80&w=800&auto=format&fit=crop",
+      // title: "Annual Sports Day",
+      // category: "Events",
+      // size: "large",
+      // src: "https://images.unsplash.com/photo-1577896334626-90ad4025f385?q=80&w=800&auto=format&fit=crop",
     },
     {
       title: "Science Exhibition",

@@ -112,7 +112,10 @@ export default function Footer() {
                     Call Us
                   </h4>
                   <p className="text-zinc-500 text-xs md:text-sm">
-                    +91 98765 43210
+                    +91 9534990113
+                  </p>
+                  <p className="text-zinc-500 text-xs md:text-sm">
+                    +91 8651592509
                   </p>
                 </div>
               </div>

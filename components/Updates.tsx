@@ -229,7 +229,10 @@ export default function Updates() {
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10">
               <p className="text-sm text-zinc-500 mb-2">Need Help?</p>
               <p className="text-lg md:text-xl font-bold text-yellow-500">
-                +91 98765 43210
+                +91 9534990113
+              </p>
+              <p className="text-lg md:text-xl font-bold text-yellow-500">
+                +91 8651592509
               </p>
               <p className="text-xs md:text-sm text-zinc-400">
                 admin@bhardwajschool.com

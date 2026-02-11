@@ -34,11 +34,11 @@ export default function RootLayout({
       >
         <div className="fixed inset-0 z-[-1]">
           <Image
-            src="/campus-hero.jpg"
+            src="/bhrrr.jpeg"
             alt="Campus Background"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-center md:object-[40%_15%]"
             quality={90}
           />
           <div className="absolute inset-0 bg-black/50 z-[1]" />
