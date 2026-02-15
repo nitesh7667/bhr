@@ -23,7 +23,7 @@ export default function Footer() {
                 },
                 {
                   icon: Instagram,
-                  href: "https://www.instagram.com/_u/bhar.dwajschool/",
+                  href: "https://www.instagram.com/bhar.dwajschool?igsh=MW41OWx1bTU5Nm10cQ==",
                 },
               ].map(({ icon: Icon, href }, i) => (
                 <a
