@@ -1,13 +1,14 @@
 "use client";
 
-import { BookOpen, Users, Trophy, Globe } from "lucide-react";
+import { BookOpen, Users, Trophy, Globe, Bus, User } from "lucide-react";
+import { Children } from "react";
 
 export default function Stats() {
   const stats = [
-    { icon: Users, label: "Expert Faculty", value: "50+" },
-    { icon: BookOpen, label: "Courses Offered", value: "25+" },
-    { icon: Trophy, label: "Awards Won", value: "100+" },
-    { icon: Globe, label: "Global Alumni", value: "2000+" },
+    { icon: Users, label: "Expert Faculty", value: "20+" },
+    { icon: BookOpen, label: "Courses Offered", value: "10+" },
+    { icon: Bus, label: "transport", value: "10+" },
+    { icon: User, label: "school strength", value: "1000+" },
   ];
 
   return (

@@ -65,16 +65,19 @@ export default function AboutPage() {
           <div className="glass-panel p-8 md:p-12 rounded-3xl flex flex-col md:flex-row gap-12 items-center">
             <div className="w-full md:w-1/3 aspect-square relative rounded-2xl overflow-hidden border-2 border-white/10 shadow-2xl">
               {/* Placeholder for Principal's Image */}
-              <div className="absolute inset-0 bg-zinc-800 flex items-center justify-center text-zinc-600">
-                <Users size={64} />
-              </div>
+              <Image
+                src="/dir.png"
+                alt="Principal"
+                fill
+                className="object-cover"
+              />
             </div>
             <div className="w-full md:w-2/3">
               <h4 className="text-yellow-500 font-bold uppercase tracking-widest mb-2">
                 From the Desk of
               </h4>
               <h2 className="text-4xl font-bold text-white mb-6">
-                The Principal
+                The director
               </h2>
               <blockquote className="text-zinc-300 text-lg italic mb-6 border-l-4 border-yellow-500 pl-6">
                 "Education is not merely the accumulation of facts; it is
@@ -86,7 +89,7 @@ export default function AboutPage() {
               <div className="flex items-center gap-4">
                 <div>
                   <p className="text-white font-bold text-xl">
-                    Dr. S. Bhardwaj
+                    chandan sir
                   </p>
                   <p className="text-zinc-500">M.A., M.Ed, Ph.D</p>
                 </div>

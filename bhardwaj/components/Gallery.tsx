@@ -4,10 +4,17 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const images = [
-  "https://images.unsplash.com/photo-1546410531-bb4caa6b424d?q=80&w=800&auto=format&fit=crop", // School building/Education
-  "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop", // Students studying
-  "https://images.unsplash.com/photo-1577896334626-90ad4025f385?q=80&w=800&auto=format&fit=crop", // Sports
-  "https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=800&auto=format&fit=crop", // Library
+  {
+    src: "/campus/bhrrr.jpeg",
+    className: "col-span-1 row-span-2",
+  }, // Feature image (Tall Left)
+  {
+    src: "/campus/science lab students bhardwaj.png",
+    className: "col-span-1 md:col-span-2",
+  }, // Wide (Right Top)
+  { src: "/sports/sport 3.jpg", className: "col-span-1 md:col-span-1" }, // Small (Right Bottom)
+  { src: "/event/culture 6.jpg", className: "col-span-1 md:col-span-2" }, // Event 1 (Left Wide)
+  { src: "/event/culture 4.jpg", className: "col-span-1 md:col-span-1" }, // Event 2 (Right Card)
 ];
 
 export default function Gallery() {
@@ -30,21 +37,19 @@ export default function Gallery() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {images.map((src, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 auto-rows-[200px] md:auto-rows-[250px]">
+          {images.map((img, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              whileHover={{ scale: 1.05, zIndex: 10 }}
-              className={`relative h-64 md:h-80 rounded-2xl overflow-hidden cursor-pointer group ${
-                index === 0 || index === 3 ? "md:col-span-2" : "col-span-1"
-              }`}
+              whileHover={{ scale: 1.02, zIndex: 10 }}
+              className={`relative rounded-2xl overflow-hidden cursor-pointer group ${img.className}`}
             >
               <Image
-                src={src}
+                src={img.src}
                 alt="Gallery Image"
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"

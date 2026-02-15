@@ -151,9 +151,20 @@ export default function AdmissionsPage() {
               <button className="flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-400 transition-colors">
                 <Download size={20} /> Download Form
               </button>
-              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-colors border border-white/10">
+              <a
+                href="/BIS_ULTRA_Premium_Prospectus_2026-27.pdf"
+                download="BIS_Prospectus_2026-27.pdf"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-colors border border-white/10"
+              >
                 <Download size={20} /> Download Prospectus
-              </button>
+              </a>
+              <a
+                href="/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf"
+                download="Bhardwaj_International_School_Fee_Structure_2026-27.pdf"
+                className="flex items-center justify-center gap-2 px-6 py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-colors border border-white/10"
+              >
+                <Download size={20} /> Fee Structure
+              </a>
             </div>
           </div>
         </div>

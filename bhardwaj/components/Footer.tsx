@@ -1,13 +1,5 @@
 import Link from "next/link";
-import {
-  Facebook,
-  Instagram,
-  Twitter,
-  Linkedin,
-  Mail,
-  Phone,
-  MapPin,
-} from "lucide-react";
+import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
@@ -24,10 +16,21 @@ export default function Footer() {
               lead tomorrow's world. Join us in our journey of excellence.
             </p>
             <div className="flex gap-4">
-              {[Facebook, Instagram, Twitter, Linkedin].map((Icon, i) => (
+              {[
+                {
+                  icon: Facebook,
+                  href: "https://www.facebook.com/bhardwajinternationalschool/",
+                },
+                {
+                  icon: Instagram,
+                  href: "https://www.instagram.com/bhar.dwajschool/",
+                },
+              ].map(({ icon: Icon, href }, i) => (
                 <a
                   key={i}
-                  href="#"
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center text-zinc-400 hover:bg-yellow-500 hover:text-black transition-all"
                 >
                   <Icon size={18} />
@@ -41,19 +44,19 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 md:mb-6">Quick Links</h3>
             <ul className="space-y-3 md:space-y-4">
               {[
-                "About Us",
-                "Admissions",
-                "Academics",
-                "Gallery",
-                "Careers",
+                { name: "About Us", href: "/about" },
+                { name: "Admissions", href: "/admissions" },
+                { name: "Academics", href: "/academics" },
+                { name: "Gallery", href: "/gallery" },
+                { name: "Contact Us", href: "/contact" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="text-zinc-500 hover:text-yellow-500 transition-colors inline-flex items-center gap-2 text-sm md:text-base"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/50" />
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -65,19 +68,20 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4 md:mb-6">Information</h3>
             <ul className="space-y-3 md:space-y-4">
               {[
-                "School Policy",
-                "Fee Structure",
-                "Transport",
-                "Parent Portal",
-                "Contact Us",
+                { name: "School Policy", href: "/school-policy" },
+                {
+                  name: "Fee Structure",
+                  href: "/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf",
+                },
+                { name: "Contact Us", href: "/contact" },
               ].map((item) => (
-                <li key={item}>
+                <li key={item.name}>
                   <Link
-                    href="#"
+                    href={item.href}
                     className="text-zinc-500 hover:text-yellow-500 transition-colors inline-flex items-center gap-2 text-sm md:text-base"
                   >
                     <span className="w-1.5 h-1.5 rounded-full bg-yellow-500/50" />
-                    {item}
+                    {item.name}
                   </Link>
                 </li>
               ))}
@@ -112,7 +116,10 @@ export default function Footer() {
                     Call Us
                   </h4>
                   <p className="text-zinc-500 text-xs md:text-sm">
-                    +91 98765 43210
+                    +91 9534990113
+                  </p>
+                  <p className="text-zinc-500 text-xs md:text-sm">
+                    +91 8651592509
                   </p>
                 </div>
               </div>

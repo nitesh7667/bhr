@@ -52,10 +52,10 @@ export default function ContactPage() {
                       Call Us
                     </h3>
                     <p className="text-zinc-400 text-sm md:text-base">
-                      +91 98765 43210
+                      +91 9534990113
                     </p>
                     <p className="text-zinc-400 text-sm md:text-base">
-                      +91 11 2345 6789
+                      +91 8651592509
                     </p>
                   </div>
                 </div>
@@ -99,7 +99,7 @@ export default function ContactPage() {
             {/* Map Integration */}
             <div className="glass-panel p-2 rounded-2xl h-64 relative overflow-hidden group">
               <iframe
-                src="https://maps.google.com/maps?q=26.2676803,84.7480548&z=17&output=embed"
+                src="https://maps.google.com/maps?q=Bhardwaj+International+School&ll=26.2676803,84.7480548&z=17&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}

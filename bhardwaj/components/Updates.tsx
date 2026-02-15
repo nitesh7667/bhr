@@ -27,14 +27,14 @@ const data: Record<Category, UpdateItem[]> = {
   notices: [
     {
       id: 1,
-      title: "Half-Yearly Examination Schedule Released",
-      date: "Jan 28, 2026",
+      title: "admission open for session 2026-27",
+      date: "Feb 16, 2026",
       urgent: true,
     },
     {
       id: 2,
-      title: "Winter Uniform Policy Update",
-      date: "Jan 25, 2026",
+      title: "new session started in april 2026",
+      date: "Feb 16, 2026",
       urgent: false,
     },
     {
@@ -47,21 +47,21 @@ const data: Record<Category, UpdateItem[]> = {
   events: [
     {
       id: 1,
-      title: "Annual Sports Day 2026",
-      date: "Feb 15, 2026",
-      location: "Main Ground",
+      title: "vasant panchmi celebration",
+      date: "jan 23, 2026",
+      location: "campus",
     },
     {
       id: 2,
       title: "Science Exhibition",
       date: "Feb 20, 2026",
-      location: "School Auditorium",
+      location: "campus",
     },
     {
       id: 3,
-      title: "Inter-School Debate Competition",
-      date: "Mar 05, 2026",
-      location: "Hall A",
+      title: "holi celebration",
+      date: "Mar 03, 2026",
+      location: "campus",
     },
   ],
   news: [
@@ -197,7 +197,11 @@ export default function Updates() {
               Quick Actions
             </h3>
             <div className="flex flex-col gap-3 md:gap-4 relative z-10">
-              <button className="flex items-center justify-between p-3 md:p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5 hover:border-yellow-500/30 group">
+              <a
+                href="/BIS_ULTRA_Premium_Prospectus_2026-27.pdf"
+                download="BIS_Prospectus_2026-27.pdf"
+                className="flex items-center justify-between p-3 md:p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5 hover:border-yellow-500/30 group"
+              >
                 <span className="font-medium text-sm md:text-base">
                   Download Prospectus
                 </span>
@@ -205,8 +209,12 @@ export default function Updates() {
                   className="text-zinc-500 group-hover:text-yellow-500 transition-colors"
                   size={20}
                 />
-              </button>
-              <button className="flex items-center justify-between p-3 md:p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5 hover:border-yellow-500/30 group">
+              </a>
+              <a
+                href="/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf"
+                download="Bhardwaj_International_School_Fee_Structure_2026-27.pdf"
+                className="flex items-center justify-between p-3 md:p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5 hover:border-yellow-500/30 group"
+              >
                 <span className="font-medium text-sm md:text-base">
                   Fee Structure
                 </span>
@@ -214,8 +222,12 @@ export default function Updates() {
                   className="text-zinc-500 group-hover:text-yellow-500 transition-colors"
                   size={20}
                 />
-              </button>
-              <button className="flex items-center justify-between p-3 md:p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5 hover:border-yellow-500/30 group">
+              </a>
+              <a
+                href="/BIS_Academic_Calendar_2026-27_Premium_Monthly.pdf"
+                download="BIS_Academic_Calendar_2026-27.pdf"
+                className="flex items-center justify-between p-3 md:p-4 bg-white/5 hover:bg-white/10 rounded-xl transition-all border border-white/5 hover:border-yellow-500/30 group"
+              >
                 <span className="font-medium text-sm md:text-base">
                   Academic Calendar
                 </span>
@@ -223,13 +235,16 @@ export default function Updates() {
                   className="text-zinc-500 group-hover:text-yellow-500 transition-colors"
                   size={20}
                 />
-              </button>
+              </a>
             </div>
 
             <div className="mt-6 md:mt-8 pt-6 md:pt-8 border-t border-white/10">
               <p className="text-sm text-zinc-500 mb-2">Need Help?</p>
               <p className="text-lg md:text-xl font-bold text-yellow-500">
-                +91 98765 43210
+                +91 9534990113
+              </p>
+              <p className="text-lg md:text-xl font-bold text-yellow-500">
+                +91 8651592509
               </p>
               <p className="text-xs md:text-sm text-zinc-400">
                 admin@bhardwajschool.com
