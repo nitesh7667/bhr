@@ -10,53 +10,150 @@ export default function GalleryPage() {
   const [filter, setFilter] = useState("All");
 
   const images = [
+    // Academics
     {
-      // title: "Annual Sports Day",
-      // category: "Events",
-      // size: "large",
-      // src: "https://images.unsplash.com/photo-1577896334626-90ad4025f385?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      title: "Science Exhibition",
+      src: "/acadmic/acadmic 1.jpg",
       category: "Academics",
-      size: "small",
-      src: "https://images.unsplash.com/photo-1564981797816-1043664bf78d?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      title: "Cultural Fest",
-      category: "Events",
-      size: "medium",
-      src: "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      title: "Library",
-      category: "Campus",
-      size: "small",
-      src: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      title: "Robotics Workshop",
-      category: "Academics",
-      size: "medium",
-      src: "https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      title: "Football Match",
-      category: "Sports",
-      size: "medium",
-      src: "https://images.unsplash.com/photo-1431324155629-1a6deb1dec8d?q=80&w=800&auto=format&fit=crop",
-    },
-    {
-      title: "Computer Lab",
-      category: "Campus",
+      title: "Academic Excellence",
       size: "large",
-      src: "https://images.unsplash.com/photo-1531482615713-2afd69097998?q=80&w=800&auto=format&fit=crop",
     },
     {
-      title: "Debate Competition",
-      category: "Co-curricular",
+      src: "/acadmic/acadmic 2.jpg",
+      category: "Academics",
+      title: "Classroom Session",
       size: "small",
-      src: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?q=80&w=800&auto=format&fit=crop",
+    },
+    {
+      src: "/acadmic/acadmic 3.jpg",
+      category: "Academics",
+      title: "Student Learning",
+      size: "medium",
+    },
+    {
+      src: "/acadmic/acadmic 4.jpg",
+      category: "Academics",
+      title: "Group Study",
+      size: "small",
+    },
+    {
+      src: "/acadmic/acadmic 5.jpg",
+      category: "Academics",
+      title: "Focused Learning",
+      size: "small",
+    },
+    {
+      src: "/acadmic/acadmic 6.jpg",
+      category: "Academics",
+      title: "Active Participation",
+      size: "medium",
+    },
+
+    // Campus
+    {
+      src: "/campus/bhrrr.jpeg",
+      category: "Campus",
+      title: "School Building",
+      size: "tall",
+    },
+    {
+      src: "/campus/campus 1.jpg",
+      category: "Campus",
+      title: "School Grounds",
+      size: "medium",
+    },
+    {
+      src: "/campus/campus 2.jpg",
+      category: "Campus",
+      title: "Play Area",
+      size: "medium",
+    },
+    {
+      src: "/campus/classroom students bhardwaj.png",
+      category: "Campus",
+      title: "Modern Classroom",
+      size: "large",
+    },
+    {
+      src: "/campus/science lab students bhardwaj.png",
+      category: "Campus",
+      title: "Science Lab",
+      size: "large",
+    },
+
+    // Events
+    {
+      src: "/event/culture 1.jpg",
+      category: "Events",
+      title: "Cultural Dance",
+      size: "medium",
+    },
+    {
+      src: "/event/culture 2.jpg",
+      category: "Events",
+      title: "Stage Performance",
+      size: "small",
+    },
+    {
+      src: "/event/culture 3.jpg",
+      category: "Events",
+      title: "Musical Event",
+      size: "small",
+    },
+    {
+      src: "/event/culture 4.jpg",
+      category: "Events",
+      title: "Drama Play",
+      size: "small",
+    },
+    {
+      src: "/event/culture 5.jpg",
+      category: "Events",
+      title: "Traditional Dance",
+      size: "small",
+    },
+    {
+      src: "/event/culture 6.jpg",
+      category: "Events",
+      title: "Group Performance",
+      size: "medium",
+    },
+    {
+      src: "/event/culture 7.jpg",
+      category: "Events",
+      title: "Annual Function",
+      size: "large",
+    },
+    {
+      src: "/event/culture 8.jpg",
+      category: "Events",
+      title: "Prize Distribution",
+      size: "medium",
+    },
+    {
+      src: "/event/culture 9.jpg",
+      category: "Events",
+      title: "Guest Speech",
+      size: "medium",
+    },
+
+    // Sports
+    {
+      src: "/sports/sport 1.jpg",
+      category: "Sports",
+      title: "Sports Day",
+      size: "medium",
+    },
+    {
+      src: "/sports/sport 2.jpg",
+      category: "Sports",
+      title: "Athletics",
+      size: "medium",
+    },
+    {
+      src: "/sports/sport 3.jpg",
+      category: "Sports",
+      title: "Winner Trophy",
+      size: "large",
     },
   ];
 
@@ -107,6 +204,7 @@ export default function GalleryPage() {
                             relative group overflow-hidden rounded-xl bg-zinc-800 
                             ${img.size === "large" ? "md:col-span-2 md:row-span-2" : ""}
                             ${img.size === "medium" ? "md:col-span-2" : ""}
+                            ${img.size === "tall" ? "md:row-span-2" : ""}
                         `}
               >
                 <Image

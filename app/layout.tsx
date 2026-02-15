@@ -22,6 +22,8 @@ export const metadata: Metadata = {
   },
 };
 
+import AdvertisementPopup from "@/components/AdvertisementPopup";
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -43,6 +45,7 @@ export default function RootLayout({
           />
           <div className="absolute inset-0 bg-black/50 z-[1]" />
         </div>
+        <AdvertisementPopup />
         {children}
       </body>
     </html>

@@ -66,9 +66,9 @@ export default function Navbar() {
               <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-yellow-400 transition-all group-hover:w-full" />
             </Link>
           ))}
-          <button className="glass-button px-5 py-2 rounded-full font-semibold text-sm text-white">
+          {/* <button className="glass-button px-5 py-2 rounded-full font-semibold text-sm text-white">
             Portal Login
-          </button>
+          </button> */}
         </div>
 
         {/* Mobile Menu Button */}
