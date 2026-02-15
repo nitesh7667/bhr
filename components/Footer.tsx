@@ -23,7 +23,7 @@ export default function Footer() {
                 },
                 {
                   icon: Instagram,
-                  href: "https://www.instagram.com/bhar.dwajschool/",
+                  href: "https://www.instagram.com/_u/bhar.dwajschool/",
                 },
               ].map(({ icon: Icon, href }, i) => (
                 <a
