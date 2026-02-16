@@ -27,7 +27,7 @@ export default function AcademicsPage() {
 
       {/* Curriculum Levels */}
       <section className="py-12 md:py-16">
-        <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-6 md:gap-8 max-w-4xl">
+        <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-3 gap-6 md:gap-8 max-w-6xl">
           {[
             {
               level: "Primary Wing",
@@ -40,6 +40,12 @@ export default function AcademicsPage() {
               grade: "Class VI - VIII",
               desc: "Transition to structured inquiry-based learning with subject-specific depth and project-based assessments.",
               color: "from-blue-500 to-cyan-500",
+            },
+            {
+              level: "Senior Wing",
+              grade: "Class IX - X",
+              desc: "Rigorous academic preparation with a focus on board exams, career counseling, and advanced conceptual understanding.",
+              color: "from-purple-500 to-violet-500",
             },
           ].map((item, i) => (
             <div
