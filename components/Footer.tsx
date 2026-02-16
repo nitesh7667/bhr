@@ -133,7 +133,7 @@ export default function Footer() {
                     Email Us
                   </h4>
                   <p className="text-zinc-500 text-xs md:text-sm">
-                    info@bhardwajschool.com
+                    director@bhardwajinternationalschool.in
                   </p>
                 </div>
               </div>
