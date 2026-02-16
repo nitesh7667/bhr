@@ -14,12 +14,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.bhardwajinternationalschool.in"),
   title: {
     default: "Bhardwaj International School | Excellence in Education",
     template: "%s | Bhardwaj International School",
   },
   description:
-    "Empowering Future Leaders - A place of excellence, discipline, and holistic development. Join Bhardwaj International School for a bright future.",
+    "Empowering future leaders with holistic education, academic excellence, and discipline. Join Bhardwaj International School for a bright and successful future.",
   keywords: [
     "Bhardwaj International School",
     "Best School in Bihar",
@@ -34,26 +35,26 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_IN",
-    url: "https://bhardwajinternationalschool.in",
+    url: "https://www.bhardwajinternationalschool.in/",
     siteName: "Bhardwaj International School",
     title: "Bhardwaj International School | Excellence in Education",
     description:
-      "Empowering Future Leaders - A place of excellence and discipline.",
+      "Empowering future leaders with holistic education, academic excellence, and discipline. Join Bhardwaj International School for a bright and successful future.",
     images: [
       {
-        url: "/logo.jpg", // Ensure this image is high quality for social previews
+        url: "/api/og",
         width: 1200,
         height: 630,
-        alt: "Bhardwaj International School Campus",
+        alt: "Bhardwaj International School - Excellence in Education",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Bhardwaj International School",
+    title: "Bhardwaj International School | Excellence in Education",
     description:
-      "Empowering Future Leaders - A place of excellence and discipline.",
-    images: ["/logo.jpg"],
+      "Empowering future leaders with holistic education, academic excellence, and discipline. Join Bhardwaj International School for a bright and successful future.",
+    images: ["/api/og"],
   },
   icons: {
     icon: "/logo.jpg",
