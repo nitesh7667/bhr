@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/admin/", // Assuming you might have an admin section later
     },
-    sitemap: "https://bhardwajinternationalschool.in/sitemap.xml",
+    sitemap: "https://www.bhardwajinternationalschool.in/sitemap.xml",
   };
 }

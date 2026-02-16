@@ -1,8 +1,7 @@
-import { Metadata, Route } from "next";
+import { MetadataRoute } from "next";
 
-export default function sitemap(): Metadata & Route[] {
-  // Note: The return type is actually simpler in Next.js 13+, usually just an array of objects, but let's stick to the standard structure.
-  const baseUrl = "https://bhardwajinternationalschool.in";
+export default function sitemap(): MetadataRoute.Sitemap {
+  const baseUrl = "https://www.bhardwajinternationalschool.in";
 
   return [
     {
@@ -47,5 +46,5 @@ export default function sitemap(): Metadata & Route[] {
       changeFrequency: "yearly",
       priority: 0.5,
     },
-  ] as any;
+  ];
 }
