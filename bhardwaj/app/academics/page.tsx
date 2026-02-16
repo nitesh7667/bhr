@@ -9,6 +9,14 @@ import {
   Dumbbell,
 } from "lucide-react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Academic Excellence | Bhardwaj International School",
+  description:
+    "Explore our comprehensive curriculum from primary to senior wing. We foster intellectual curiosity and critical thinking for holistic development.",
+};
+
 export default function AcademicsPage() {
   return (
     <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">

@@ -246,8 +246,8 @@ export default function Updates() {
               <p className="text-lg md:text-xl font-bold text-yellow-500">
                 +91 8651592509
               </p>
-              <p className="text-xs md:text-sm text-zinc-400">
-                admin@bhardwajschool.com
+              <p className="text-xs md:text-sm text-zinc-400 break-all">
+                director@bhardwajinternationalschool.in
               </p>
             </div>
           </div>

@@ -2,6 +2,14 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Contact Us | Bhardwaj International School",
+  description:
+    "Get in touch with Bhardwaj International School. Visit our campus, call us, or email us. We are here to assist you with your queries.",
+};
+
 export default function ContactPage() {
   return (
     <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
@@ -68,11 +76,8 @@ export default function ContactPage() {
                     <h3 className="text-white font-semibold text-lg">
                       Email Us
                     </h3>
-                    <p className="text-zinc-400 text-sm md:text-base">
-                      info@bhardwajschool.com
-                    </p>
-                    <p className="text-zinc-400 text-sm md:text-base">
-                      admissions@bhardwajschool.com
+                    <p className="text-zinc-400 text-sm md:text-base break-all">
+                      director@bhardwajinternationalschool.in
                     </p>
                   </div>
                 </div>
