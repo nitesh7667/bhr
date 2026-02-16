@@ -9,6 +9,14 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Admissions | Bhardwaj International School",
+  description:
+    "Join the Bhardwaj family. Find information on admission process, age criteria, required documents, and download the prospectus and fee structure.",
+};
+
 export default function AdmissionsPage() {
   return (
     <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
