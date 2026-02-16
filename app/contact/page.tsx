@@ -69,10 +69,7 @@ export default function ContactPage() {
                       Email Us
                     </h3>
                     <p className="text-zinc-400 text-sm md:text-base">
-                      info@bhardwajschool.com
-                    </p>
-                    <p className="text-zinc-400 text-sm md:text-base">
-                      admissions@bhardwajschool.com
+                      director@bhardwajinternationalschool.in
                     </p>
                   </div>
                 </div>

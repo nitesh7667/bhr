@@ -247,7 +247,7 @@ export default function Updates() {
                 +91 8651592509
               </p>
               <p className="text-xs md:text-sm text-zinc-400">
-                admin@bhardwajschool.com
+                director@bhardwajinternationalschool.in
               </p>
             </div>
           </div>
