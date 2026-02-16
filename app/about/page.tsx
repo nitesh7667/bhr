@@ -3,6 +3,14 @@ import Footer from "@/components/Footer";
 import { Target, Lightbulb, Users, Award } from "lucide-react";
 import Image from "next/image";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "About Us | Bhardwaj International School",
+  description:
+    "Learn about our mission, vision, and the legacy of excellence at Bhardwaj International School. Meet our director and understand our core values.",
+};
+
 export default function AboutPage() {
   return (
     <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
@@ -88,9 +96,7 @@ export default function AboutPage() {
               </blockquote>
               <div className="flex items-center gap-4">
                 <div>
-                  <p className="text-white font-bold text-xl">
-                    chandan sir
-                  </p>
+                  <p className="text-white font-bold text-xl">chandan sir</p>
                   <p className="text-zinc-500">M.A., M.Ed, Ph.D</p>
                 </div>
                 {/* Signature placeholder could go here */}
