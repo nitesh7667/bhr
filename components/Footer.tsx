@@ -132,7 +132,7 @@ export default function Footer() {
                   <h4 className="text-white font-medium mb-1 text-sm md:text-base">
                     Email Us
                   </h4>
-                  <p className="text-zinc-500 text-xs md:text-sm">
+                  <p className="text-zinc-500 text-xs md:text-sm break-all">
                     director@bhardwajinternationalschool.in
                   </p>
                 </div>

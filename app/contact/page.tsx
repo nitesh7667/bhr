@@ -68,7 +68,7 @@ export default function ContactPage() {
                     <h3 className="text-white font-semibold text-lg">
                       Email Us
                     </h3>
-                    <p className="text-zinc-400 text-sm md:text-base">
+                    <p className="text-zinc-400 text-sm md:text-base break-all">
                       director@bhardwajinternationalschool.in
                     </p>
                   </div>
