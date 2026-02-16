@@ -7,14 +7,28 @@ const images = [
   {
     src: "/campus/bhrrr.jpeg",
     className: "col-span-1 row-span-2",
+    alt: "Bhardwaj International School Campus Building",
   }, // Feature image (Tall Left)
   {
     src: "/campus/science lab students bhardwaj.png",
     className: "col-span-1 md:col-span-2",
+    alt: "Students actively learning in the Science Lab",
   }, // Wide (Right Top)
-  { src: "/sports/sport 3.jpg", className: "col-span-1 md:col-span-1" }, // Small (Right Bottom)
-  { src: "/event/culture 6.jpg", className: "col-span-1 md:col-span-2" }, // Event 1 (Left Wide)
-  { src: "/event/culture 4.jpg", className: "col-span-1 md:col-span-1" }, // Event 2 (Right Card)
+  {
+    src: "/sports/sport 3.jpg",
+    className: "col-span-1 md:col-span-1",
+    alt: "Students participating in sports activities",
+  }, // Small (Right Bottom)
+  {
+    src: "/event/culture 6.jpg",
+    className: "col-span-1 md:col-span-2",
+    alt: "Cultural event celebration at Bhardwaj International School",
+  }, // Event 1 (Left Wide)
+  {
+    src: "/event/culture 4.jpg",
+    className: "col-span-1 md:col-span-1",
+    alt: "Students performing in a cultural program",
+  }, // Event 2 (Right Card)
 ];
 
 export default function Gallery() {
@@ -50,7 +64,7 @@ export default function Gallery() {
             >
               <Image
                 src={img.src}
-                alt="Gallery Image"
+                alt={img.alt}
                 fill
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
