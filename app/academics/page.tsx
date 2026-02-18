@@ -19,15 +19,15 @@ export const metadata: Metadata = {
 
 export default function AcademicsPage() {
   return (
-    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
+    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-slate-50">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-slate-900">
           Academic Excellence
         </h1>
-        <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Comprehensive curriculum designed to foster intellectual curiosity and
           critical thinking at every stage of development.
         </p>
@@ -58,20 +58,20 @@ export default function AcademicsPage() {
           ].map((item, i) => (
             <div
               key={i}
-              className="glass-panel p-6 md:p-8 rounded-2xl relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300"
+              className="bg-white p-8 rounded-[2rem] relative overflow-hidden flex flex-col h-full hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-2xl border border-slate-100 border-b-8 border-yellow-500 group"
             >
               <div
-                className={`absolute top-0 left-0 w-full h-1 bg-gradient-to-r ${item.color}`}
+                className={`absolute top-0 left-0 w-full h-2 bg-gradient-to-r ${item.color}`}
               />
-              <h3 className="text-2xl font-bold text-white mb-2">
+              <h3 className="text-3xl font-bold text-slate-900 mb-2">
                 {item.level}
               </h3>
               <p
-                className={`text-sm font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-4`}
+                className={`text-sm font-bold bg-gradient-to-r ${item.color} bg-clip-text text-transparent mb-6 uppercase tracking-wider`}
               >
                 {item.grade}
               </p>
-              <p className="text-zinc-400 leading-relaxed text-sm md:text-base">
+              <p className="text-slate-600 leading-relaxed text-base">
                 {item.desc}
               </p>
             </div>
@@ -80,12 +80,12 @@ export default function AcademicsPage() {
       </section>
 
       {/* Beyond Classroom */}
-      <section className="py-20">
+      <section className="py-20 bg-white">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">
+          <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-12 text-center">
             Beyond The Classroom
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             {[
               { icon: Palette, label: "Arts & Craft" },
               { icon: Music, label: "Music & Dance" },
@@ -94,12 +94,14 @@ export default function AcademicsPage() {
             ].map((act, i) => (
               <div
                 key={i}
-                className="p-6 rounded-xl bg-white/5 hover:bg-white/10 transition-colors"
+                className="p-8 rounded-2xl bg-slate-50 hover:bg-white hover:shadow-xl transition-all duration-300 border border-slate-100 border-b-8 border-yellow-500 group"
               >
-                <div className="w-12 h-12 mx-auto bg-zinc-800 rounded-full flex items-center justify-center text-white mb-4">
-                  <act.icon size={24} />
+                <div className="w-16 h-16 mx-auto bg-white rounded-full flex items-center justify-center text-slate-700 mb-6 shadow-sm group-hover:scale-110 transition-transform group-hover:text-yellow-600">
+                  <act.icon size={32} />
                 </div>
-                <h4 className="text-lg font-medium text-white">{act.label}</h4>
+                <h4 className="text-xl font-bold text-slate-800">
+                  {act.label}
+                </h4>
               </div>
             ))}
           </div>

@@ -74,7 +74,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        <div className="fixed inset-0 z-[-1]">
+        {/* <div className="fixed inset-0 z-[-1]">
           <Image
             src="/bhrrr.jpeg"
             alt="Campus Background"
@@ -84,7 +84,7 @@ export default function RootLayout({
             quality={90}
           />
           <div className="absolute inset-0 bg-black/50 z-[1]" />
-        </div>
+        </div> */}
         <AdvertisementPopup />
         {children}
       </body>

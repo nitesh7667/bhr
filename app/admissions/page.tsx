@@ -19,15 +19,15 @@ export const metadata: Metadata = {
 
 export default function AdmissionsPage() {
   return (
-    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
+    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-slate-50">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-slate-900">
           Admission Process
         </h1>
-        <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           We welcome students who are eager to learn, grow, and contribute to
           our community. Here is how you can become a part of the Bhardwaj
           family.
@@ -62,15 +62,15 @@ export default function AdmissionsPage() {
             ].map((step, i) => (
               <div
                 key={i}
-                className="glass-panel p-6 rounded-2xl border-t-2 border-yellow-500/50 hover:bg-white/5 transition-colors"
+                className="bg-white p-8 rounded-[2rem] border-t-4 border-yellow-500 hover:-translate-y-2 transition-transform duration-300 shadow-lg hover:shadow-xl border-b-8 border-yellow-500 group"
               >
-                <div className="w-12 h-12 bg-zinc-800 rounded-lg flex items-center justify-center text-yellow-500 mb-4 font-bold text-xl">
+                <div className="w-14 h-14 bg-yellow-50 rounded-2xl flex items-center justify-center text-yellow-600 mb-6 font-bold text-xl shadow-sm group-hover:bg-yellow-100 transition-colors">
                   {i + 1}
                 </div>
-                <h3 className="text-lg md:text-xl font-bold text-white mb-2">
+                <h3 className="text-xl font-bold text-slate-900 mb-3">
                   {step.title}
                 </h3>
-                <p className="text-zinc-400 text-sm leading-relaxed">
+                <p className="text-slate-600 text-sm leading-relaxed">
                   {step.desc}
                 </p>
               </div>
@@ -80,35 +80,35 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Eligibility & Documents */}
-      <section className="py-16 md:py-20 bg-black/20">
-        <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-8 md:gap-12">
+      <section className="py-16 md:py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 lg:gap-16">
           {/* Eligibility Table */}
           <div>
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">
               Age Criteria
             </h2>
-            <div className="glass-panel overflow-hidden rounded-xl overflow-x-auto">
-              <table className="w-full text-left text-zinc-300 min-w-[300px]">
-                <thead className="bg-yellow-500/10 text-yellow-500">
+            <div className="bg-slate-50 rounded-2xl overflow-hidden overflow-x-auto border border-slate-100 shadow-md border-b-8 border-yellow-500">
+              <table className="w-full text-left text-slate-600 min-w-[300px]">
+                <thead className="bg-yellow-50 text-yellow-700">
                   <tr>
-                    <th className="p-4 font-bold whitespace-nowrap">Class</th>
-                    <th className="p-4 font-bold whitespace-nowrap">
+                    <th className="p-6 font-bold whitespace-nowrap">Class</th>
+                    <th className="p-6 font-bold whitespace-nowrap">
                       Minimum Age (as of March 31)
                     </th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-white/10">
-                  <tr>
-                    <td className="p-4">Nursery</td>
-                    <td className="p-4">3+ Years</td>
+                <tbody className="divide-y divide-slate-200">
+                  <tr className="hover:bg-white transition-colors">
+                    <td className="p-6 font-medium">Nursery</td>
+                    <td className="p-6">3+ Years</td>
                   </tr>
-                  <tr>
-                    <td className="p-4">KG</td>
-                    <td className="p-4">4+ Years</td>
+                  <tr className="hover:bg-white transition-colors">
+                    <td className="p-6 font-medium">KG</td>
+                    <td className="p-6">4+ Years</td>
                   </tr>
-                  <tr>
-                    <td className="p-4">Class I</td>
-                    <td className="p-4">5+ Years</td>
+                  <tr className="hover:bg-white transition-colors">
+                    <td className="p-6 font-medium">Class I</td>
+                    <td className="p-6">5+ Years</td>
                   </tr>
                 </tbody>
               </table>
@@ -117,7 +117,7 @@ export default function AdmissionsPage() {
 
           {/* Documents List */}
           <div>
-            <h2 className="text-3xl font-bold text-white mb-6">
+            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">
               Documents Required
             </h2>
             <ul className="space-y-4">
@@ -130,13 +130,13 @@ export default function AdmissionsPage() {
               ].map((doc, i) => (
                 <li
                   key={i}
-                  className="flex items-start gap-3 text-zinc-300 p-3 bg-white/5 rounded-lg border border-white/5"
+                  className="flex items-start gap-4 text-slate-700 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:bg-white hover:shadow-md transition-all"
                 >
                   <CheckCircle2
                     className="text-green-500 flex-shrink-0 mt-0.5"
-                    size={18}
+                    size={20}
                   />
-                  <span>{doc}</span>
+                  <span className="font-medium">{doc}</span>
                 </li>
               ))}
             </ul>
@@ -145,34 +145,37 @@ export default function AdmissionsPage() {
       </section>
 
       {/* CTA / Downloads */}
-      <section className="py-20">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-6 text-center">
-          <div className="glass-panel max-w-2xl mx-auto p-10 rounded-2xl relative overflow-hidden">
-            <div className="absolute inset-0 bg-yellow-500/5" />
-            <h2 className="text-3xl font-bold text-white mb-4 relative z-10">
-              Ready to Apply?
-            </h2>
-            <p className="text-zinc-400 mb-8 relative z-10">
-              Download our admission form or prospectus to get started offline.
-            </p>
-            <div className="flex flex-col sm:flex-row justify-center gap-4 relative z-10">
-              <button className="flex items-center justify-center gap-2 px-6 py-3 bg-yellow-500 text-black font-bold rounded-lg hover:bg-yellow-400 transition-colors">
-                <Download size={20} /> Download Form
-              </button>
-              <a
-                href="/BIS_ULTRA_Premium_Prospectus_2026-27.pdf"
-                download="BIS_Prospectus_2026-27.pdf"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-colors border border-white/10"
-              >
-                <Download size={20} /> Download Prospectus
-              </a>
-              <a
-                href="/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf"
-                download="Bhardwaj_International_School_Fee_Structure_2026-27.pdf"
-                className="flex items-center justify-center gap-2 px-6 py-3 bg-zinc-800 text-white font-bold rounded-lg hover:bg-zinc-700 transition-colors border border-white/10"
-              >
-                <Download size={20} /> Fee Structure
-              </a>
+          <div className="bg-white max-w-3xl mx-auto p-12 rounded-[3rem] relative overflow-hidden shadow-2xl border border-slate-100">
+            <div className="absolute inset-0 bg-yellow-50/50" />
+            <div className="relative z-10">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
+                Ready to Apply?
+              </h2>
+              <p className="text-slate-600 mb-10 text-lg">
+                Download our admission form or prospectus to get started
+                offline.
+              </p>
+              <div className="flex flex-col sm:flex-row justify-center gap-4">
+                <button className="flex items-center justify-center gap-2 px-8 py-4 bg-yellow-500 text-black font-bold rounded-xl hover:bg-yellow-400 transition-all shadow-lg hover:shadow-yellow-500/30 hover:-translate-y-1">
+                  <Download size={20} /> Download Form
+                </button>
+                <a
+                  href="/BIS_ULTRA_Premium_Prospectus_2026-27.pdf"
+                  download="BIS_Prospectus_2026-27.pdf"
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-all shadow-lg hover:shadow-slate-800/30 hover:-translate-y-1"
+                >
+                  <Download size={20} /> Download Prospectus
+                </a>
+                <a
+                  href="/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf"
+                  download="Bhardwaj_International_School_Fee_Structure_2026-27.pdf"
+                  className="flex items-center justify-center gap-2 px-8 py-4 bg-slate-800 text-white font-bold rounded-xl hover:bg-slate-700 transition-all shadow-lg hover:shadow-slate-800/30 hover:-translate-y-1"
+                >
+                  <Download size={20} /> Fee Structure
+                </a>
+              </div>
             </div>
           </div>
         </div>

@@ -160,15 +160,15 @@ export default function GalleryContent() {
     filter === "All" ? images : images.filter((img) => img.category === filter);
 
   return (
-    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
+    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-slate-50">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-slate-900">
           Photo Gallery
         </h1>
-        <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Capturing moments of learning, joy, and achievement from Campus Life.
         </p>
       </div>
@@ -183,10 +183,10 @@ export default function GalleryContent() {
                 <button
                   key={i}
                   onClick={() => setFilter(cat)}
-                  className={`px-6 py-2 rounded-full border border-white/10 transition-all ${
+                  className={`px-6 py-2 rounded-full border transition-all font-medium ${
                     filter === cat
-                      ? "bg-yellow-500 text-black font-bold"
-                      : "text-zinc-400 hover:text-white hover:bg-white/5"
+                      ? "bg-yellow-500 text-black border-yellow-500 shadow-md transform scale-105"
+                      : "bg-white text-slate-600 border-slate-200 hover:bg-slate-50 hover:border-slate-300"
                   }`}
                 >
                   {cat}
@@ -195,12 +195,12 @@ export default function GalleryContent() {
             )}
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 auto-rows-[250px]">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 auto-rows-[250px]">
             {filteredImages.map((img, i) => (
               <div
                 key={i}
                 className={`
-                            relative group overflow-hidden rounded-xl bg-zinc-800 
+                            relative group overflow-hidden rounded-2xl bg-slate-200 shadow-md hover:shadow-xl transition-all duration-500
                             ${img.size === "large" ? "md:col-span-2 md:row-span-2" : ""}
                             ${img.size === "medium" ? "md:col-span-2" : ""}
                             ${img.size === "tall" ? "md:row-span-2" : ""}
@@ -214,8 +214,8 @@ export default function GalleryContent() {
                 />
 
                 {/* Overlay */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-                  <span className="text-yellow-500 text-xs font-bold uppercase tracking-wider mb-2">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                  <span className="text-yellow-400 text-xs font-bold uppercase tracking-wider mb-2">
                     {img.category}
                   </span>
                   <h3 className="text-white font-bold text-xl">{img.title}</h3>
@@ -225,7 +225,7 @@ export default function GalleryContent() {
           </div>
 
           <div className="mt-12 text-center">
-            <button className="px-8 py-3 border border-white/20 rounded-full text-white hover:bg-white/10 transition-colors">
+            <button className="px-8 py-3 border border-slate-300 text-slate-700 font-medium rounded-full hover:bg-slate-100 hover:text-slate-900 transition-colors shadow-sm">
               Load More Memories
             </button>
           </div>

@@ -11,34 +11,34 @@ import {
 
 export default function SchoolPolicyPage() {
   return (
-    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black">
+    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-slate-50">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-white text-center">
-        <h1 className="text-4xl md:text-6xl font-bold mb-4 md:mb-6 bg-clip-text text-transparent bg-gradient-to-r from-yellow-200 to-yellow-600">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center">
+        <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-slate-900">
           School Policies
         </h1>
-        <p className="text-lg md:text-xl text-zinc-300 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed">
           Guidelines and regulations ensuring a safe, disciplined, and
           productive environment for all students.
         </p>
       </div>
 
       {/* content */}
-      <section className="py-12 md:py-16 bg-black/20">
+      <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6 grid gap-8">
           {/* General Code of Conduct */}
-          <div className="glass-panel p-8 rounded-2xl">
+          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-yellow-500/10 rounded-full text-yellow-500">
+              <div className="p-4 bg-yellow-50 rounded-full text-yellow-600">
                 <Shield size={28} />
               </div>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-slate-900">
                 General Code of Conduct
               </h2>
             </div>
-            <ul className="space-y-4 text-zinc-400 list-disc pl-6 marker:text-yellow-500">
+            <ul className="space-y-4 text-slate-600 list-disc pl-6 marker:text-yellow-500">
               <li>
                 Students must maintain high standards of discipline and behavior
                 within the school premises.
@@ -59,16 +59,16 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Attendance Policy */}
-          <div className="glass-panel p-8 rounded-2xl">
+          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-blue-500/10 rounded-full text-blue-500">
+              <div className="p-4 bg-blue-50 rounded-full text-blue-600">
                 <Clock size={28} />
               </div>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-slate-900">
                 Attendance & Punctuality
               </h2>
             </div>
-            <ul className="space-y-4 text-zinc-400 list-disc pl-6 marker:text-blue-500">
+            <ul className="space-y-4 text-slate-600 list-disc pl-6 marker:text-blue-500">
               <li>
                 Regular attendance is compulsory. Minimum 75% attendance is
                 required to appear for final examinations.
@@ -89,16 +89,16 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Uniform Policy */}
-          <div className="glass-panel p-8 rounded-2xl">
+          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-green-500/10 rounded-full text-green-500">
+              <div className="p-4 bg-green-50 rounded-full text-green-600">
                 <UserCheck size={28} />
               </div>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-slate-900">
                 Uniform & Grooming
               </h2>
             </div>
-            <ul className="space-y-4 text-zinc-400 list-disc pl-6 marker:text-green-500">
+            <ul className="space-y-4 text-slate-600 list-disc pl-6 marker:text-green-500">
               <li>
                 Students must wear a neat and clean uniform as prescribed by the
                 school.
@@ -119,16 +119,16 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Examination Policy */}
-          <div className="glass-panel p-8 rounded-2xl">
+          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-purple-500/10 rounded-full text-purple-500">
+              <div className="p-4 bg-purple-50 rounded-full text-purple-600">
                 <Book size={28} />
               </div>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-slate-900">
                 Academics & Examinations
               </h2>
             </div>
-            <ul className="space-y-4 text-zinc-400 list-disc pl-6 marker:text-purple-500">
+            <ul className="space-y-4 text-slate-600 list-disc pl-6 marker:text-purple-500">
               <li>
                 Use of unfair means during examinations will lead to immediate
                 disqualification.
@@ -142,20 +142,20 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Anti-Bullying Policy */}
-          <div className="glass-panel p-8 rounded-2xl border border-red-500/20">
+          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
             <div className="flex items-center gap-4 mb-6">
-              <div className="p-3 bg-red-500/10 rounded-full text-red-500">
+              <div className="p-4 bg-red-50 rounded-full text-red-600">
                 <AlertCircle size={28} />
               </div>
-              <h2 className="text-2xl font-bold text-white">
+              <h2 className="text-2xl font-bold text-slate-900">
                 Anti-Bullying & Safety
               </h2>
             </div>
-            <p className="text-zinc-400 mb-4">
+            <p className="text-slate-600 mb-4">
               Bhardwaj International School has a zero-tolerance policy towards
               bullying, ragging, or any form of harassment.
             </p>
-            <ul className="space-y-4 text-zinc-400 list-disc pl-6 marker:text-red-500">
+            <ul className="space-y-4 text-slate-600 list-disc pl-6 marker:text-red-500">
               <li>
                 Any student found engaging in bullying will face severe
                 disciplinary action, including suspension or expulsion.
