@@ -149,7 +149,7 @@ export default function Updates() {
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`flex items-center gap-2 px-6 py-3 rounded-t-lg transition-all relative ${isActive
+                    className={`flex items-center gap-2 px-4 sm:px-6 py-3 rounded-t-lg transition-all relative ${isActive
                       ? "text-yellow-600 bg-white shadow-sm border border-b-0 border-slate-200"
                       : "text-slate-500 hover:text-slate-700 hover:bg-slate-100/50"
                       }`}

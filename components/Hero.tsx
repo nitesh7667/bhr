@@ -38,7 +38,7 @@ export default function Hero() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen md:mt-4 flex items-center justify-center overflow-hidden bg-slate-900">
+    <section className="relative w-full min-h-[40vh] sm:min-h-screen md:mt-4 flex items-center justify-center overflow-hidden bg-slate-900">
       {/* Background Slideshow with Ken Burns Effect */}
       <AnimatePresence mode="popLayout">
         <motion.div

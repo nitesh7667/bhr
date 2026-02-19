@@ -3,9 +3,9 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-white pt-12 md:pt-20 pb-8 md:pb-10 border-t border-slate-800">
+    <footer className="bg-[#0f172a] text-white pt-12 md:pt-20 pb-8 md:pb-10 border-t border-slate-800 px-6 sm:px-0">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
           {/* Brand Column */}
           <div>
             <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-white">
@@ -40,54 +40,56 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 md:mb-6">Quick Links</h3>
-            <ul className="space-y-3 md:space-y-4">
-              {[
-                { name: "About Us", href: "/about" },
-                { name: "Admissions", href: "/admissions" },
-                { name: "Academics", href: "/academics" },
-                { name: "Gallery", href: "/gallery" },
-                { name: "Contact Us", href: "/contact" },
-              ].map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center gap-2 text-sm md:text-base"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+          <div className="flex sm:w-full justify-between sm:justify-evenly">
+            <div>
+              <h3 className="text-lg font-semibold mb-4 md:mb-6">Quick Links</h3>
+              <ul className="space-y-3 md:space-y-4">
+                {[
+                  { name: "About Us", href: "/about" },
+                  { name: "Admissions", href: "/admissions" },
+                  { name: "Academics", href: "/academics" },
+                  { name: "Gallery", href: "/gallery" },
+                  { name: "Contact Us", href: "/contact" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center gap-2 text-sm md:text-base"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
-          {/* Information */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 md:mb-6">Information</h3>
-            <ul className="space-y-3 md:space-y-4">
-              {[
-                { name: "School Policy", href: "/school-policy" },
-                {
-                  name: "Fee Structure",
-                  href: "/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf",
-                },
-                { name: "Contact Us", href: "/contact" },
-              ].map((item) => (
-                <li key={item.name}>
-                  <Link
-                    href={item.href}
-                    className="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center gap-2 text-sm md:text-base"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
+            {/* Information */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4 md:mb-6">Information</h3>
+              <ul className="space-y-3 md:space-y-4">
+                {[
+                  { name: "School Policy", href: "/school-policy" },
+                  {
+                    name: "Fee Structure",
+                    href: "/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf",
+                  },
+                  { name: "Contact Us", href: "/contact" },
+                ].map((item) => (
+                  <li key={item.name}>
+                    <Link
+                      href={item.href}
+                      className="text-slate-400 hover:text-blue-400 transition-colors inline-flex items-center gap-2 text-sm md:text-base"
+                    >
+                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500/50" />
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
 
+          </div>
           {/* Contact Info */}
           <div>
             <h3 className="text-lg font-semibold mb-4 md:mb-6">Contact Us</h3>
