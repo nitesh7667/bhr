@@ -1,12 +1,55 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import Image from "next/image";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
+const productSans = localFont({
+  src: [
+    {
+      path: "../public/fonts/Product Sans Regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/ProductSans-Medium.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Product Sans Bold.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/Product Sans Italic.ttf",
+      weight: "400",
+      style: "italic",
+    },
+    {
+      path: "../public/fonts/Product Sans Bold Italic.ttf",
+      weight: "700",
+      style: "italic",
+    },
+
+  ],
+  variable: "--font-product-sans",
 });
+
+const codecPro = localFont({
+  src: [
+    {
+      path: "../public/fonts/codec-pro.regular.ttf",
+      weight: "400",
+      style: "normal",
+    },
+
+
+  ],
+  variable: "--font-codec-pro",
+});
+
+
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
@@ -72,7 +115,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${productSans.variable} ${codecPro.variable} ${geistMono.variable} antialiased`}
       >
         {/* <div className="fixed inset-0 z-[-1]">
           <Image

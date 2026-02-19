@@ -8,8 +8,13 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
+  --font-sans: var(--font-product-sans);
   --font-mono: var(--font-geist-mono);
+  --font-codec-pro: var(--font-codec-pro);
+}
+
+.font-codec-pro {
+  font-family: var(--font-codec-pro);
 }
 
 @layer utilities {

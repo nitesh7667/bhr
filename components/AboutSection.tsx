@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 export default function AboutSection() {
   return (
     <section className="py-16 md:py-24 bg-white overflow-hidden">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 max-w-7xl">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Left Column: Text Content */}
           <motion.div
@@ -14,7 +14,7 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1 flex flex-col justify-center"
+            className="sm:order-2 lg:order-1 flex flex-col justify-center"
           >
             <div className="mb-6">
               <span className="text-red-500 font-bold text-lg tracking-wide uppercase block mb-2">
@@ -63,13 +63,13 @@ export default function AboutSection() {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="relative h-[400px] md:h-[600px] rounded-2xl overflow-hidden shadow-2xl order-1 lg:order-2 bg-slate-50"
+            className="relative h-[400px] md:h-full  overflow-hidden  order-1 lg:order-2 bg-slate-50"
           >
             <Image
               src="/campus/bhrrr.jpeg"
               alt="Bhardwaj International School Campus"
               fill
-              className="object-fill transition-transform duration-700 hover:scale-105"
+              className="object-cover object-top-right transition-transform duration-700 hover:scale-105"
             />
           </motion.div>
         </div>

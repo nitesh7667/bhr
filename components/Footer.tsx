@@ -92,20 +92,25 @@ export default function Footer() {
           <div>
             <h3 className="text-lg font-semibold mb-4 md:mb-6">Contact Us</h3>
             <div className="space-y-4 md:space-y-6">
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500">
+              <a
+                href="https://www.google.com/maps/search/?api=1&query=Smt.+Kamini+Complex,+Dakbangla+Chauk,+Shambhunath+Nagar,+Dighwa+Dubaulli+North,+Bihar+841409"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex gap-4 group"
+              >
+                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1 text-sm md:text-base">
+                  <h4 className="text-white font-medium mb-1 text-sm md:text-base group-hover:text-blue-400 transition-colors">
                     Visit Us
                   </h4>
-                  <p className="text-slate-400 text-xs md:text-sm">
+                  <p className="text-slate-400 text-xs md:text-sm group-hover:text-slate-300 transition-colors">
                     Smt. Kamini Complex, Dakbangla Chauk, <br />
                     Shambhunath Nagar, Dighwa Dubaulli North, Bihar 841409
                   </p>
                 </div>
-              </div>
+              </a>
 
               <div className="flex gap-4">
                 <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500">
@@ -115,28 +120,36 @@ export default function Footer() {
                   <h4 className="text-white font-medium mb-1 text-sm md:text-base">
                     Call Us
                   </h4>
-                  <p className="text-slate-400 text-xs md:text-sm">
-                    +91 9534990113
-                  </p>
-                  <p className="text-slate-400 text-xs md:text-sm">
-                    +91 8651592509
-                  </p>
+                  <div className="flex flex-col gap-1">
+                    <a
+                      href="tel:+919534990113"
+                      className="text-slate-400 text-xs md:text-sm hover:text-blue-400 transition-colors"
+                    >
+                      +91 9534990113
+                    </a>
+                    <a
+                      href="tel:+918651592509"
+                      className="text-slate-400 text-xs md:text-sm hover:text-blue-400 transition-colors"
+                    >
+                      +91 8651592509
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500">
+              <a href="mailto:director@bhardwajinternationalschool.in" className="flex gap-4 group">
+                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1 text-sm md:text-base">
+                  <h4 className="text-white font-medium mb-1 text-sm md:text-base group-hover:text-blue-400 transition-colors">
                     Email Us
                   </h4>
-                  <p className="text-slate-400 text-xs md:text-sm break-all">
+                  <p className="text-slate-400 text-xs md:text-sm break-all group-hover:text-slate-300 transition-colors">
                     director@bhardwajinternationalschool.in
                   </p>
                 </div>
-              </div>
+              </a>
             </div>
           </div>
         </div>
