@@ -19,11 +19,11 @@ export const metadata: Metadata = {
 
 export default function AdmissionsPage() {
   return (
-    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-slate-50">
+    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-gradient-to-br from-slate-50 via-white to-indigo-50">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center bg-gradient-to-b from-indigo-100/40 to-transparent">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-slate-900">
           Admission Process
         </h1>
@@ -80,75 +80,79 @@ export default function AdmissionsPage() {
       </section>
 
       {/* Eligibility & Documents */}
-      <section className="py-16 md:py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-12 lg:gap-16">
-          {/* Eligibility Table */}
-          <div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">
-              Age Criteria
-            </h2>
-            <div className="bg-slate-50 rounded-2xl overflow-hidden overflow-x-auto border border-slate-100 shadow-md border-b-8 border-yellow-500">
-              <table className="w-full text-left text-slate-600 min-w-[300px]">
-                <thead className="bg-yellow-50 text-yellow-700">
-                  <tr>
-                    <th className="p-6 font-bold whitespace-nowrap">Class</th>
-                    <th className="p-6 font-bold whitespace-nowrap">
-                      Minimum Age (as of March 31)
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="divide-y divide-slate-200">
-                  <tr className="hover:bg-white transition-colors">
-                    <td className="p-6 font-medium">Nursery</td>
-                    <td className="p-6">3+ Years</td>
-                  </tr>
-                  <tr className="hover:bg-white transition-colors">
-                    <td className="p-6 font-medium">KG</td>
-                    <td className="p-6">4+ Years</td>
-                  </tr>
-                  <tr className="hover:bg-white transition-colors">
-                    <td className="p-6 font-medium">Class I</td>
-                    <td className="p-6">5+ Years</td>
-                  </tr>
-                </tbody>
-              </table>
+      <section className="py-16 md:py-20 bg-gradient-to-br from-slate-800 to-slate-900 overflow-hidden">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
+            {/* Eligibility Table */}
+            <div className="w-full">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-6 md:mb-8 text-center lg:text-left">
+                Age Criteria
+              </h2>
+              <div className="bg-white/10 rounded-2xl overflow-hidden shadow-md border-b-4 border-yellow-500 border-x border-t border-white/20 w-full overflow-x-auto">
+                <div className="min-w-[300px]">
+                  <table className="w-full text-left text-slate-600">
+                    <thead className="bg-yellow-500/30 text-yellow-300">
+                      <tr>
+                        <th className="p-4 md:p-6 font-bold whitespace-nowrap text-sm md:text-base">Class</th>
+                        <th className="p-4 md:p-6 font-bold whitespace-nowrap text-sm md:text-base">
+                          Minimum Age (as of March 31)
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody className="divide-y divide-white/10 text-slate-200">
+                      <tr className="hover:bg-white/10 transition-colors">
+                        <td className="p-4 md:p-6 font-medium text-sm md:text-base">Nursery</td>
+                        <td className="p-4 md:p-6 text-sm md:text-base">3+ Years</td>
+                      </tr>
+                      <tr className="hover:bg-white/10 transition-colors">
+                        <td className="p-4 md:p-6 font-medium text-sm md:text-base">KG</td>
+                        <td className="p-4 md:p-6 text-sm md:text-base">4+ Years</td>
+                      </tr>
+                      <tr className="hover:bg-white/10 transition-colors">
+                        <td className="p-4 md:p-6 font-medium text-sm md:text-base">Class I</td>
+                        <td className="p-4 md:p-6 text-sm md:text-base">5+ Years</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
-          </div>
 
-          {/* Documents List */}
-          <div>
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-8">
-              Documents Required
-            </h2>
-            <ul className="space-y-4">
-              {[
-                "Birth Certificate (Original for verification + Photocopy)",
-                "Transfer Certificate (Original) from previous school",
-                "Report Card of the last class attended",
-                "Passport size photographs of student and parents",
-                "Aadhar Card of student and parents",
-              ].map((doc, i) => (
-                <li
-                  key={i}
-                  className="flex items-start gap-4 text-slate-700 p-4 bg-slate-50 rounded-xl border border-slate-100 hover:bg-white hover:shadow-md transition-all"
-                >
-                  <CheckCircle2
-                    className="text-green-500 flex-shrink-0 mt-0.5"
-                    size={20}
-                  />
-                  <span className="font-medium">{doc}</span>
-                </li>
-              ))}
-            </ul>
+            {/* Documents List */}
+            <div className="w-full">
+              <h2 className="text-2xl md:text-3xl font-extrabold text-white mb-6 md:mb-8 text-center lg:text-left">
+                Documents Required
+              </h2>
+              <ul className="space-y-4 w-full">
+                {[
+                  "Birth Certificate (Original for verification + Photocopy)",
+                  "Transfer Certificate (Original) from previous school",
+                  "Report Card of the last class attended",
+                  "Passport size photographs of student and parents",
+                  "Aadhar Card of student and parents",
+                ].map((doc, i) => (
+                  <li
+                    key={i}
+                    className="flex items-start gap-4 text-slate-200 p-4 md:p-5 bg-white/10 rounded-xl border border-white/20 hover:bg-white/20 hover:shadow-md transition-all shadow-sm"
+                  >
+                    <CheckCircle2
+                      className="text-green-500 flex-shrink-0 mt-0.5"
+                      size={20}
+                    />
+                    <span className="font-medium text-sm md:text-base leading-snug">{doc}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
         </div>
       </section>
 
       {/* CTA / Downloads */}
-      <section className="py-20 bg-slate-50">
+      <section className="py-20 bg-gradient-to-r from-slate-800 via-slate-700 to-indigo-900">
         <div className="container mx-auto px-6 text-center">
-          <div className="bg-white max-w-3xl mx-auto p-12 rounded-[3rem] relative overflow-hidden shadow-2xl border border-slate-100">
-            <div className="absolute inset-0 bg-yellow-50/50" />
+          <div className="bg-white max-w-3xl mx-auto p-12 rounded-[3rem] relative overflow-hidden shadow-2xl border border-white/50">
+            <div className="absolute inset-0 bg-white/80 backdrop-blur-sm" />
             <div className="relative z-10">
               <h2 className="text-3xl md:text-4xl font-extrabold text-slate-900 mb-6">
                 Ready to Apply?
