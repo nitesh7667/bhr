@@ -115,13 +115,7 @@ export default function Navbar() {
               className="md:hidden border-t border-slate-100 bg-white overflow-hidden shadow-xl"
             >
               <div className="flex flex-col p-4 gap-2">
-                <Link
-                  href="/"
-                  className="flex items-center gap-3 text-gray-700 hover:text-[#f97316] hover:bg-orange-50 p-3 rounded-lg transition-colors font-medium border-b border-gray-100"
-                  onClick={() => setIsMobileMenuOpen(false)}
-                >
-                  <Home size={18} /> Home
-                </Link>
+               
                 {navLinks.map((link) => (
                   <Link
                     key={link.name}
@@ -138,7 +132,7 @@ export default function Navbar() {
         </AnimatePresence>
       </nav>
       {/* Spacer to prevent content overlap since navbar is fixed */}
-      <div className="h-[100px] md:h-[88px] w-full bg-white"></div>
+      <div className="h-[80px] md:h-[88px] w-full bg-white"></div>
     </>
   );
 }

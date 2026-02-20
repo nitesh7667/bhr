@@ -11,11 +11,11 @@ import {
 
 export default function SchoolPolicyPage() {
   return (
-    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-slate-50">
+    <main className="min-h-screen font-sans selection:bg-yellow-500 selection:text-black bg-gradient-to-br from-slate-50 via-white to-indigo-50">
       <Navbar />
 
       {/* Header */}
-      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center">
+      <div className="pt-24 md:pt-32 pb-12 md:pb-16 container mx-auto px-4 md:px-6 text-center bg-gradient-to-b from-indigo-100/40 to-transparent">
         <h1 className="text-4xl md:text-6xl font-extrabold mb-4 md:mb-6 text-slate-900">
           School Policies
         </h1>
@@ -29,7 +29,7 @@ export default function SchoolPolicyPage() {
       <section className="py-12 md:py-16">
         <div className="container mx-auto px-4 md:px-6 grid gap-8">
           {/* General Code of Conduct */}
-          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
+          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-yellow-100 hover:shadow-xl transition-all duration-300 border-b-4 border-yellow-500">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-yellow-50 rounded-full text-yellow-600">
                 <Shield size={28} />
@@ -59,7 +59,7 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Attendance Policy */}
-          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
+          <div className="bg-blue-50 p-8 rounded-[2rem] shadow-lg border border-blue-100 hover:shadow-xl transition-all duration-300 border-b-4 border-blue-500">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-blue-50 rounded-full text-blue-600">
                 <Clock size={28} />
@@ -89,7 +89,7 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Uniform Policy */}
-          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
+          <div className="bg-green-50 p-8 rounded-[2rem] shadow-lg border border-green-100 hover:shadow-xl transition-all duration-300 border-b-4 border-green-500">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-green-50 rounded-full text-green-600">
                 <UserCheck size={28} />
@@ -119,7 +119,7 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Examination Policy */}
-          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
+          <div className="bg-purple-50 p-8 rounded-[2rem] shadow-lg border border-purple-100 hover:shadow-xl transition-all duration-300 border-b-4 border-purple-500">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-purple-50 rounded-full text-purple-600">
                 <Book size={28} />
@@ -142,7 +142,7 @@ export default function SchoolPolicyPage() {
           </div>
 
           {/* Anti-Bullying Policy */}
-          <div className="bg-white p-8 rounded-[2rem] shadow-lg border border-slate-100 hover:shadow-xl transition-all duration-300 border-b-8 border-yellow-500">
+          <div className="bg-red-50 p-8 rounded-[2rem] shadow-lg border border-red-100 hover:shadow-xl transition-all duration-300 border-b-4 border-red-500">
             <div className="flex items-center gap-4 mb-6">
               <div className="p-4 bg-red-50 rounded-full text-red-600">
                 <AlertCircle size={28} />

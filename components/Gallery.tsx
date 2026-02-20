@@ -1,8 +1,9 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { useState, useCallback, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight, X, ChevronLeft, ChevronRight } from "lucide-react";
 
 interface GalleryItem {
   id: number;
@@ -58,6 +59,38 @@ const galleryItems: GalleryItem[] = [
 ];
 
 export default function Gallery() {
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+  const openModal = (index: number) => {
+    setSelectedIndex(index);
+  };
+
+  const closeModal = useCallback(() => {
+    setSelectedIndex(null);
+  }, []);
+
+  const nextImage = useCallback(() => {
+    setSelectedIndex((prev) => (prev !== null ? (prev + 1) % galleryItems.length : null));
+  }, []);
+
+  const prevImage = useCallback(() => {
+    setSelectedIndex((prev) => {
+      if (prev === null) return null;
+      return prev === 0 ? galleryItems.length - 1 : prev - 1;
+    });
+  }, []);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (selectedIndex === null) return;
+      if (e.key === "Escape") closeModal();
+      if (e.key === "ArrowRight") nextImage();
+      if (e.key === "ArrowLeft") prevImage();
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [selectedIndex, closeModal, nextImage, prevImage]);
   return (
     <section className="bg-slate-950 py-24 text-white">
       <div className="max-w-[1400px] mx-auto px-4 md:px-6">
@@ -87,7 +120,8 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: index * 0.1, duration: 0.5 }}
-              className={`relative overflow-hidden group bg-slate-900 
+              onClick={() => openModal(index)}
+              className={`relative overflow-hidden group bg-slate-900 cursor-pointer 
                 ${item.size === "tall" ? "md:col-span-1 md:row-span-2" : ""}
                 ${item.size === "wide" ? "md:col-span-2 md:row-span-1" : ""}
                 ${item.size === "medium" ? "md:col-span-1 md:row-span-1" : ""}
@@ -120,6 +154,74 @@ export default function Gallery() {
           ))}
         </div>
       </div>
+      {/* Lightbox Modal */}
+      <AnimatePresence>
+        {selectedIndex !== null && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            className="fixed inset-0 z-[9999] flex items-center justify-center bg-black/95 backdrop-blur-sm p-4 md:p-8"
+            onClick={closeModal}
+          >
+            <button
+              onClick={closeModal}
+              className="absolute top-4 right-4 md:top-8 md:right-8 text-white/50 hover:text-white transition-colors z-50"
+            >
+              <X size={32} />
+            </button>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                prevImage();
+              }}
+              className="absolute left-2 md:left-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50 p-2"
+            >
+              <ChevronLeft size={40} />
+            </button>
+
+            <button
+              onClick={(e) => {
+                e.stopPropagation();
+                nextImage();
+              }}
+              className="absolute right-2 md:right-8 top-1/2 -translate-y-1/2 text-white/50 hover:text-white transition-colors z-50 p-2"
+            >
+              <ChevronRight size={40} />
+            </button>
+
+            <motion.div
+              key={selectedIndex}
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              exit={{ opacity: 0, scale: 0.9 }}
+              transition={{ type: "spring", stiffness: 300, damping: 30 }}
+              className="relative w-full max-w-5xl h-[85vh] md:h-[90vh] md:aspect-[16/10] max-h-[85vh] flex items-center justify-center"
+              onClick={(e) => e.stopPropagation()}
+            >
+              <div className="relative w-full h-full">
+                <Image
+                  src={galleryItems[selectedIndex].src}
+                  alt={galleryItems[selectedIndex].title}
+                  fill
+                  className="object-contain"
+                  priority
+                />
+              </div>
+
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/80 to-transparent pointer-events-none">
+                <span className="text-yellow-500 text-sm font-bold uppercase tracking-widest mb-1 block">
+                  {galleryItems[selectedIndex].category}
+                </span>
+                <h3 className="text-white text-md sm:text-2xl font-codec-pro font-semibold">
+                  {galleryItems[selectedIndex].title}
+                </h3>
+              </div>
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   );
 }

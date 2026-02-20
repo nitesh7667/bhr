@@ -117,20 +117,20 @@ export default function Updates() {
   const [activeTab, setActiveTab] = useState<Category>("notices");
 
   return (
-    <section className="py-24 bg-slate-50 relative overflow-hidden  border-yellow-500  ">
+    <section className="py-24 bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 relative overflow-hidden border-yellow-500">
       {/* Subtle Background Elements */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-slate-200/50 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
+      <div className="absolute top-0 left-0 w-96 h-96 bg-yellow-400/10 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-3xl translate-x-1/3 translate-y-1/3 pointer-events-none" />
 
       <div className="max-w-7xl mx-auto px-4 md:px-6 relative z-10">
 
         {/* Header Section */}
         <div className="text-center mb-16 max-w-2xl mx-auto">
 
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-slate-900 font-codec-pro tracking-tight">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white font-codec-pro tracking-tight">
             Campus <span className="text-yellow-500">Updates</span>
           </h2>
-          <p className="text-slate-600 text-lg leading-relaxed">
+          <p className="text-slate-400 text-lg leading-relaxed">
             Stay informed about academic schedules, upcoming events, and important
             announcements at Bhardwaj International School.
           </p>
@@ -141,7 +141,7 @@ export default function Updates() {
           {/* Main Content Area (Tabs + List) */}
           <div className="lg:w-2/3">
             {/* Custom Tabs */}
-            <div className="flex items-center gap-2 mb-8 border-b border-slate-200 pb-1 overflow-x-auto no-scrollbar">
+            <div className="flex items-center gap-2 mb-8 border-b border-white/10 pb-1 overflow-x-auto no-scrollbar">
               {(["notices", "events", "news"] as const).map((tab) => {
                 const Icon = iconMap[tab];
                 const isActive = activeTab === tab;
@@ -150,12 +150,12 @@ export default function Updates() {
                     key={tab}
                     onClick={() => setActiveTab(tab)}
                     className={`flex items-center gap-2 px-4 sm:px-6 py-3 rounded-t-lg transition-all relative ${isActive
-                      ? "text-yellow-600 bg-white shadow-sm border border-b-0 border-slate-200"
-                      : "text-slate-500 hover:text-slate-700 hover:bg-slate-100/50"
+                      ? "text-yellow-400 bg-white/10 shadow-sm border border-b-0 border-white/20"
+                      : "text-slate-400 hover:text-slate-200 hover:bg-white/5"
                       }`}
                   >
-                    <Icon size={18} className={isActive ? "text-yellow-500" : "text-slate-400"} />
-                    <span className={`font-semibold capitalize ${isActive ? "text-slate-900" : ""}`}>{tab}</span>
+                    <Icon size={18} className={isActive ? "text-yellow-400" : "text-slate-500"} />
+                    <span className={`font-semibold capitalize ${isActive ? "text-white" : ""}`}>{tab}</span>
                     {isActive && (
                       <motion.div
                         layoutId="activeTabIndicator"
@@ -187,17 +187,17 @@ export default function Updates() {
                       initial={{ opacity: 0, y: 20 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ delay: index * 0.1 }}
-                      className="group bg-white rounded-2xl p-6 shadow-sm border border-slate-100 hover:shadow-md hover:border-yellow-200 transition-all duration-300 relative overflow-hidden"
+                      className="group bg-white/5 rounded-2xl p-6 shadow-sm border border-white/10 hover:shadow-md hover:border-yellow-500/40 transition-all duration-300 relative overflow-hidden"
                     >
                       <div className="absolute top-0 left-0 w-1 h-full bg-slate-200 group-hover:bg-yellow-500 transition-colors duration-300" />
 
                       <div className="flex flex-col md:flex-row gap-6 md:items-start pl-3">
                         {/* Date Box */}
-                        <div className="flex-shrink-0 flex md:flex-col items-center gap-2 md:gap-0 bg-slate-50 rounded-xl p-3 md:w-20 text-center border border-slate-100 group-hover:border-yellow-100 transition-colors">
-                          <span className="text-2xl font-bold text-slate-800 font-codec-pro">
+                        <div className="flex-shrink-0 flex md:flex-col items-center gap-2 md:gap-0 bg-white/10 rounded-xl p-3 md:w-20 text-center border border-white/10 group-hover:border-yellow-500/30 transition-colors">
+                          <span className="text-2xl font-bold text-white font-codec-pro">
                             {item.date.split(' ')[1].replace(',', '')}
                           </span>
-                          <span className="text-xs font-semibold uppercase text-slate-500">
+                          <span className="text-xs font-semibold uppercase text-slate-300">
                             {item.date.split(' ')[0]}
                           </span>
                           <span className="text-[10px] text-slate-400">
@@ -221,12 +221,12 @@ export default function Updates() {
                             </div>
                           </div>
 
-                          <h3 className="text-xl font-bold text-slate-800 mb-2 group-hover:text-yellow-600 transition-colors leading-tight">
+                          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-yellow-400 transition-colors leading-tight">
                             {item.title}
                           </h3>
 
                           {item.summary && (
-                            <p className="text-slate-600 text-sm leading-relaxed mb-4 line-clamp-2">
+                            <p className="text-slate-400 text-sm leading-relaxed mb-4 line-clamp-2">
                               {item.summary}
                             </p>
                           )}
@@ -242,7 +242,7 @@ export default function Updates() {
               </AnimatePresence>
 
               <div className="mt-8 text-center">
-                <button className="px-6 py-2.5 rounded-full border border-slate-200 text-slate-600 text-sm font-semibold hover:bg-slate-50 hover:text-slate-900 transition-colors">
+                <button className="px-6 py-2.5 rounded-full border border-white/20 text-slate-300 text-sm font-semibold hover:bg-white/10 hover:text-white transition-colors">
                   View All {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
                 </button>
               </div>
@@ -283,7 +283,7 @@ export default function Updates() {
 
             {/* Quick Actions Grid */}
             <div>
-              <h3 className="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <h3 className="text-lg font-bold text-white mb-4 flex items-center gap-2">
                 <DockIcon className="text-yellow-500" size={20} /> Quick Resources
               </h3>
               <div className="grid gap-3">

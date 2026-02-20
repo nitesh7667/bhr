@@ -10,7 +10,6 @@ import Image from "next/image";
 const backgroundImages = [
   "/campus/campus 1.jpg",
   "/campus/campus 2.jpg",
-  "/event/culture 7.jpg",
   "/sports/sport 3.jpg",
   "/sports/sport 1.jpg",
   "/acadmic/acadmic 3.jpg",
@@ -60,7 +59,7 @@ export default function Hero() {
                 src={backgroundImages[currentImageIndex]}
                 alt="Campus Background"
                 fill
-                className="object-cover"
+                className="object-cover object-center"
                 priority={true}
               />
             </motion.div>
