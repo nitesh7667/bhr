@@ -242,9 +242,9 @@ export default function Updates() {
               </AnimatePresence>
 
               <div className="mt-8 text-center">
-                <button className="px-6 py-2.5 rounded-full border border-white/20 text-slate-300 text-sm font-semibold hover:bg-white/10 hover:text-white transition-colors">
+                {/* <button className="px-6 py-2.5 rounded-full border border-white/20 text-slate-300 text-sm font-semibold hover:bg-white/10 hover:text-white transition-colors">
                   View All {activeTab.charAt(0).toUpperCase() + activeTab.slice(1)}
-                </button>
+                </button> */}
               </div>
             </div>
           </div>
@@ -288,9 +288,9 @@ export default function Updates() {
               </h3>
               <div className="grid gap-3">
                 {[
-                  { title: "Download Prospectus", href: "#", icon: Download, desc: "Get detailed school info" },
-                  { title: "Fee Structure", href: "#", icon: DockIcon, desc: "Session 2026-27" },
-                  { title: "Academic Calendar", href: "#", icon: Calendar1, desc: "Yearly schedule" },
+                  { title: "Download Prospectus", href: "https://bhardwajintlschool.com/prospectus.pdf", icon: Download, desc: "Get detailed school info" },
+                  { title: "Fee Structure", href: "https://bhardwajintlschool.com/fee-structure.pdf", icon: DockIcon, desc: "Session 2026-27" },
+                  { title: "Academic Calendar", href: "https://bhardwajintlschool.com/academic-calendar.pdf", icon: Calendar1, desc: "Yearly schedule" },
                 ].map((item, i) => (
                   <a
                     key={i}

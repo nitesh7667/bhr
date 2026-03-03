@@ -42,7 +42,9 @@ export default function Footer() {
           {/* Quick Links */}
           <div className="flex sm:w-full justify-between sm:justify-evenly">
             <div>
-              <h3 className="text-lg font-semibold mb-4 md:mb-6">Quick Links</h3>
+              <h3 className="text-lg font-semibold mb-4 md:mb-6">
+                Quick Links
+              </h3>
               <ul className="space-y-3 md:space-y-4">
                 {[
                   { name: "About Us", href: "/about" },
@@ -66,7 +68,9 @@ export default function Footer() {
 
             {/* Information */}
             <div>
-              <h3 className="text-lg font-semibold mb-4 md:mb-6">Information</h3>
+              <h3 className="text-lg font-semibold mb-4 md:mb-6">
+                Information
+              </h3>
               <ul className="space-y-3 md:space-y-4">
                 {[
                   { name: "School Policy", href: "/school-policy" },
@@ -88,7 +92,6 @@ export default function Footer() {
                 ))}
               </ul>
             </div>
-
           </div>
           {/* Contact Info */}
           <div>
@@ -139,7 +142,10 @@ export default function Footer() {
                 </div>
               </div>
 
-              <a href="mailto:director@bhardwajinternationalschool.in" className="flex gap-4 group">
+              <a
+                href="mailto:director@bhardwajinternationalschool.in"
+                className="flex gap-4 group"
+              >
                 <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
                   <Mail size={20} />
                 </div>
@@ -158,7 +164,16 @@ export default function Footer() {
 
         <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
           <p className="text-slate-500 text-xs md:text-sm">
-            © 2026 Bhardwaj International School. All rights reserved.
+            © 2026{" "}
+            <a
+              href="https://www.sorabyte.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-white transition-colors text-yellow-500"
+            >
+              sorabyte.in
+            </a>{" "}
+            all rights reserved.
           </p>
           <div className="flex gap-6 text-xs md:text-sm text-slate-500">
             <Link href="#" className="hover:text-white transition-colors">

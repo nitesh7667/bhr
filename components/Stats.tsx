@@ -12,12 +12,12 @@ export default function Stats() {
     {
       icon: Users,
       label: "Student Strength",
-      value: "1500+",
+      value: "1000+",
     },
     {
       icon: GraduationCap,
       label: "Qualified Faculty",
-      value: "50+",
+      value: "20+",
     },
     {
       icon: Bus,

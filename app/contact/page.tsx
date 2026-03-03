@@ -1,6 +1,7 @@
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Mail, MapPin, Phone, Clock, Send } from "lucide-react";
+import Image from "next/image";
 
 import { Metadata } from "next";
 
@@ -115,99 +116,14 @@ export default function ContactPage() {
             </div>
           </div>
 
-          {/* Contact Form */}
-          <div className="bg-white p-8 md:p-12 rounded-[2.5rem] shadow-xl border border-slate-100 border-b-8 border-yellow-500">
-            <h2 className="text-3xl font-extrabold text-slate-900 mb-2">
-              Send us a Message
-            </h2>
-            <p className="text-slate-600 mb-10 text-lg">
-              Fill the form below and we will get back to you shortly.
-            </p>
-
-            <form className="space-y-6">
-              <div className="grid md:grid-cols-2 gap-6">
-                <div className="space-y-2">
-                  <label className="text-sm text-slate-700 font-bold ml-1">
-                    First Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all placeholder:text-slate-400"
-                    placeholder="John"
-                  />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm text-slate-700 font-bold ml-1">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all placeholder:text-slate-400"
-                    placeholder="Doe"
-                  />
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm text-slate-700 font-bold ml-1">
-                  Email Address
-                </label>
-                <input
-                  type="email"
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all placeholder:text-slate-400"
-                  placeholder="john@example.com"
-                />
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm text-slate-700 font-bold ml-1">
-                  Subject
-                </label>
-                <div className="relative">
-                  <select className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all appearance-none cursor-pointer">
-                    <option value="" disabled selected>
-                      Select a subject
-                    </option>
-                    <option>General Inquiry</option>
-                    <option>Admissions</option>
-                    <option>Careers</option>
-                    <option>Student Support</option>
-                  </select>
-                  <div className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-slate-500">
-                    <svg
-                      width="12"
-                      height="8"
-                      viewBox="0 0 12 8"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M1 1.5L6 6.5L11 1.5"
-                        stroke="currentColor"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                      />
-                    </svg>
-                  </div>
-                </div>
-              </div>
-
-              <div className="space-y-2">
-                <label className="text-sm text-slate-700 font-bold ml-1">
-                  Message
-                </label>
-                <textarea
-                  rows={5}
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-5 py-4 text-slate-900 focus:outline-none focus:border-yellow-500 focus:ring-2 focus:ring-yellow-500/20 transition-all placeholder:text-slate-400 resize-none"
-                  placeholder="How can we help you?"
-                />
-              </div>
-
-              <button className="w-full py-4 bg-yellow-500 text-black font-extrabold text-lg rounded-xl hover:bg-yellow-400 hover:shadow-lg hover:shadow-yellow-500/30 transition-all flex items-center justify-center gap-3 transform hover:-translate-y-1">
-                <Send size={20} /> Send Message
-              </button>
-            </form>
+          {/* Campus Image */}
+          <div className="bg-white p-2 rounded-[2.5rem] shadow-xl border border-slate-100 border-b-8 border-yellow-500 relative overflow-hidden group min-h-[400px]">
+            <Image
+              src="/campus/bhrrr.jpeg"
+              alt="Bhardwaj International School Campus"
+              fill
+              className="object-cover rounded-[2rem]"
+            />
           </div>
         </div>
       </section>
