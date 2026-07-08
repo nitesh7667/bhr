@@ -288,9 +288,9 @@ export default function Updates() {
               </h3>
               <div className="grid gap-3">
                 {[
-                  { title: "Download Prospectus", href: "https://bhardwajintlschool.com/prospectus.pdf", icon: Download, desc: "Get detailed school info" },
-                  { title: "Fee Structure", href: "https://bhardwajintlschool.com/fee-structure.pdf", icon: DockIcon, desc: "Session 2026-27" },
-                  { title: "Academic Calendar", href: "https://bhardwajintlschool.com/academic-calendar.pdf", icon: Calendar1, desc: "Yearly schedule" },
+                  { title: "Download Prospectus", href: "/BIS_ULTRA_Premium_Prospectus_2026-27.pdf", icon: Download, desc: "Get detailed school info" },
+                  { title: "Fee Structure", href: "/Bhardwaj_International_School_Fee_Structure_2026-27_SINGLE_PAGE_FINAL.pdf", icon: DockIcon, desc: "Session 2026-27" },
+                  { title: "Academic Calendar", href: "/BISC_ULTRA_ACADEMIC_CALENDER_2026-27.pdf", icon: Calendar1, desc: "Yearly schedule" },
                 ].map((item, i) => (
                   <a
                     key={i}

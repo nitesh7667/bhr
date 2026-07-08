@@ -15,6 +15,7 @@ import {
   Calendar,
   Users,
   Globe,
+  CreditCard,
 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -25,6 +26,7 @@ const navLinks = [
   { name: "Admissions", href: "/admissions", icon: Trophy },
   { name: "Gallery", href: "/gallery", icon: Calendar },
   { name: "Contact Us", href: "/contact", icon: Users },
+  { name: "Online Payment", href: "/payment", icon: CreditCard },
 ];
 
 export default function Navbar() {

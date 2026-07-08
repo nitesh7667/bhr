@@ -9,6 +9,7 @@ import {
   Users,
   BookOpen,
   Globe,
+  QrCode,
 } from "lucide-react"; // Import icons
 import Link from "next/link";
 import Image from "next/image";
@@ -74,13 +75,33 @@ export default function Hero() {
       <div className="absolute inset-x-0 top-0 h-48 md:h-64 bg-gradient-to-b from-white via-white/10 to-transparent z-10 pointer-events-none"></div>
 
       {/* Main Content */}
-      <div className="relative z-20 w-full h-full flex flex-col items-center justify-center">
-        {/* Gradient Overlay for better text readability */}
-        {/* <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/20 via-black/40 to-black/60" /> */}
+      <div className="relative z-20 w-full h-full flex flex-col items-center justify-end text-center px-4 md:px-6 pb-12 md:pb-20">
+        {/* Dark overlay specifically inside the content area for high contrast text readability */}
+        <div className="absolute inset-0 z-0 bg-gradient-to-b from-black/40 via-black/50 to-black/70 pointer-events-none" />
 
-        {/* <div className="absolute bottom-0 left-1/2 -translate-x-1/2 text-[100px] w-full z-10 bg-gradient-to-b from-black/20 via-black/40 to-black/60">
-          BHARDWAJ 
-        </div> */}
+        <div className="relative z-10 max-w-4xl mx-auto flex flex-col items-center justify-center">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center z-30"
+          >
+            <Link
+              href="/payment"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-slate-950 font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-105 active:scale-95 text-base border border-yellow-300/30"
+            >
+              <QrCode size={20} className="stroke-[2.5]" />
+              Pay School Fees
+            </Link>
+            <Link
+              href="/about"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:scale-105 active:scale-95 text-base border border-white/20"
+            >
+              Explore Admissions
+              <ArrowRight size={20} />
+            </Link>
+          </motion.div>
+        </div>
       </div>
     </section>
   );
