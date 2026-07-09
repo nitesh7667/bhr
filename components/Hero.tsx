@@ -94,7 +94,7 @@ export default function Hero() {
               Pay School Fees
             </Link>
             <Link
-              href="/about"
+              href="/admissions"
               className="flex items-center justify-center gap-2 w-full sm:w-auto bg-white/10 hover:bg-white/20 backdrop-blur-md text-white font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-md hover:scale-105 active:scale-95 text-base border border-white/20"
             >
               Explore Admissions

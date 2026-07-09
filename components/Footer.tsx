@@ -3,11 +3,11 @@ import { Facebook, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-[#0f172a] text-white pt-12 md:pt-20 pb-8 md:pb-10 border-t border-slate-800 px-6 sm:px-0">
+    <footer className="bg-[#0f172a] text-white pt-12 md:pt-20 pb-8 md:pb-10 border-t border-slate-800 px-6 sm:px-0 print:bg-transparent print:text-black print:border-t print:border-slate-200 print:pt-6 print:pb-0">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 mb-12 md:mb-16 print:block">
           {/* Brand Column */}
-          <div>
+          <div className="print:hidden">
             <h2 className="text-xl md:text-2xl font-bold mb-4 md:mb-6 text-white">
               BHARDWAJ <span className="text-blue-500">INTL.</span>
             </h2>
@@ -40,7 +40,7 @@ export default function Footer() {
           </div>
 
           {/* Quick Links */}
-          <div className="flex sm:w-full justify-between sm:justify-evenly">
+          <div className="flex sm:w-full justify-between sm:justify-evenly print:hidden">
             <div>
               <h3 className="text-lg font-semibold mb-4 md:mb-6">
                 Quick Links
@@ -94,23 +94,25 @@ export default function Footer() {
             </div>
           </div>
           {/* Contact Info */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4 md:mb-6">Contact Us</h3>
-            <div className="space-y-4 md:space-y-6">
+          <div className="print:w-full">
+            <h3 className="text-lg font-semibold mb-4 md:mb-6 print:text-black print:mb-4">
+              Contact Us
+            </h3>
+            <div className="space-y-4 md:space-y-6 print:space-y-4">
               <a
                 href="https://www.google.com/maps/search/?api=1&query=Smt.+Kamini+Complex,+Dakbangla+Chauk,+Shambhunath+Nagar,+Dighwa+Dubaulli+North,+Bihar+841409"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex gap-4 group"
               >
-                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all print:bg-slate-100 print:text-slate-800">
                   <MapPin size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1 text-sm md:text-base group-hover:text-blue-400 transition-colors">
+                  <h4 className="text-white font-medium mb-1 text-sm md:text-base group-hover:text-blue-400 transition-colors print:text-black">
                     Visit Us
                   </h4>
-                  <p className="text-slate-400 text-xs md:text-sm group-hover:text-slate-300 transition-colors">
+                  <p className="text-slate-400 text-xs md:text-sm group-hover:text-slate-300 transition-colors print:text-slate-700">
                     Smt. Kamini Complex, Dakbangla Chauk, <br />
                     Shambhunath Nagar, Dighwa Dubaulli North, Bihar 841409
                   </p>
@@ -118,23 +120,23 @@ export default function Footer() {
               </a>
 
               <div className="flex gap-4">
-                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500">
+                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 print:bg-slate-100 print:text-slate-800">
                   <Phone size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1 text-sm md:text-base">
+                  <h4 className="text-white font-medium mb-1 text-sm md:text-base print:text-black">
                     Call Us
                   </h4>
                   <div className="flex flex-col gap-1">
                     <a
                       href="tel:+919534990113"
-                      className="text-slate-400 text-xs md:text-sm hover:text-blue-400 transition-colors"
+                      className="text-slate-400 text-xs md:text-sm hover:text-blue-400 transition-colors print:text-slate-700"
                     >
                       +91 9534990113
                     </a>
                     <a
                       href="tel:+918651592509"
-                      className="text-slate-400 text-xs md:text-sm hover:text-blue-400 transition-colors"
+                      className="text-slate-400 text-xs md:text-sm hover:text-blue-400 transition-colors print:text-slate-700"
                     >
                       +91 8651592509
                     </a>
@@ -146,14 +148,14 @@ export default function Footer() {
                 href="mailto:director@bhardwajinternationalschool.in"
                 className="flex gap-4 group"
               >
-                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all">
+                <div className="w-10 h-10 rounded-full bg-slate-800 flex flex-shrink-0 items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-all print:bg-slate-100 print:text-slate-800">
                   <Mail size={20} />
                 </div>
                 <div>
-                  <h4 className="text-white font-medium mb-1 text-sm md:text-base group-hover:text-blue-400 transition-colors">
+                  <h4 className="text-white font-medium mb-1 text-sm md:text-base group-hover:text-blue-400 transition-colors print:text-black">
                     Email Us
                   </h4>
-                  <p className="text-slate-400 text-xs md:text-sm break-all group-hover:text-slate-300 transition-colors">
+                  <p className="text-slate-400 text-xs md:text-sm break-all group-hover:text-slate-300 transition-colors print:text-slate-700">
                     director@bhardwajinternationalschool.in
                   </p>
                 </div>
@@ -162,7 +164,7 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left">
+        <div className="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4 text-center md:text-left print:hidden">
           <p className="text-slate-500 text-xs md:text-sm">
             © 2026{" "}
             <a
