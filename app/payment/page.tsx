@@ -60,7 +60,7 @@ export default function PaymentPage() {
     bankName: "State Bank of India",
     accountNumber: "39820482938",
     ifscCode: "SBIN0001234",
-    upiId: "bhardwajschool@sbi",
+    upiId: "9534990113@sbi",
     branch: "Dighwa Dubaulli Branch",
   };
 
