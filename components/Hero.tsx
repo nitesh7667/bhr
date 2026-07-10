@@ -87,7 +87,7 @@ export default function Hero() {
             className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto items-center justify-center z-30"
           >
             <Link
-              href="/payment"
+              href="/pay.php"
               className="flex items-center justify-center gap-2 w-full sm:w-auto bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-slate-950 font-bold px-8 py-4 rounded-full transition-all duration-300 shadow-lg shadow-orange-500/20 hover:shadow-orange-500/30 hover:scale-105 active:scale-95 text-base border border-yellow-300/30"
             >
               <QrCode size={20} className="stroke-[2.5]" />
