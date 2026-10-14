@@ -11,7 +11,7 @@ export default function PaymentPage() {
   const [copiedField, setCopiedField] = useState<string | null>(null);
   const [isQRImageLoaded, setIsQRImageLoaded] = useState(false);
 
-  const upiId = "9534990113@sbi";
+  const upiId = "bhardwajinternationalschool@icici";
 
   const copyToClipboard = (text: string, field: string) => {
     navigator.clipboard.writeText(text);
@@ -58,24 +58,25 @@ export default function PaymentPage() {
 
       {/* QR Code Display Area */}
       <section className="py-16 md:py-24 px-4 md:px-6 relative z-10">
-        <div className="max-w-md mx-auto">
+        <div className="mx-auto w-full max-w-[28rem]">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
-            className="bg-white rounded-[2.5rem] p-8 md:p-10 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center"
+            className="bg-white rounded-[2rem] sm:rounded-[2.5rem] p-5 sm:p-8 md:p-10 shadow-xl shadow-slate-200/50 border border-slate-100 flex flex-col items-center text-center"
           >
             {/* QR Scanner Container */}
-            <div className="relative w-64 h-64 bg-slate-50 border border-slate-200/60 rounded-3xl p-4 flex items-center justify-center mb-8">
+            <div className="relative w-full max-w-[20rem] sm:max-w-[22rem] aspect-square bg-slate-50 border border-slate-200/60 rounded-3xl p-3 sm:p-4 flex items-center justify-center mb-8 overflow-hidden">
               {/* Scanning animation line */}
               <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-yellow-400 to-transparent shadow-lg shadow-yellow-400/50 animate-[scan_3s_ease-in-out_infinite] z-20" />
 
               <div className="relative w-full h-full">
                 <Image
-                  src="/QR payment.jpeg"
+                  src="/qr.jpeg"
                   alt="Payment QR Code"
                   fill
-                  className="object-contain rounded-2xl"
+                  sizes="(max-width: 768px) 100vw, 420px"
+                  className="object-fill rounded-2xl"
                   onLoad={() => setIsQRImageLoaded(true)}
                 />
                 {!isQRImageLoaded && (
@@ -102,24 +103,27 @@ export default function PaymentPage() {
             </p>
 
             {/* UPI ID Copy Field */}
-            <div className="w-full bg-slate-50 p-4 rounded-2xl border border-slate-100 flex items-center justify-between mb-6">
-              <div className="text-left">
+            <div className="w-full bg-slate-50 p-3 sm:p-4 rounded-2xl border border-slate-100 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between mb-6">
+              <div className="text-left min-w-0 flex-1">
                 <p className="text-[10px] text-slate-400 font-bold uppercase tracking-wider">
                   UPI ID / VPA
                 </p>
-                <p className="text-slate-800 font-bold font-mono text-sm mt-0.5">
+                <p className="text-slate-800 font-bold font-mono text-xs sm:text-sm mt-0.5 break-all">
                   {upiId}
                 </p>
               </div>
               <button
                 onClick={() => copyToClipboard(upiId, "upi")}
-                className="p-2 bg-white rounded-xl hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-sm cursor-pointer"
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-3 py-2 bg-white rounded-xl hover:bg-slate-100 border border-slate-200 text-slate-600 hover:text-slate-900 transition-colors shadow-sm cursor-pointer"
               >
                 {copiedField === "upi" ? (
                   <Check size={16} className="text-emerald-500" />
                 ) : (
                   <Copy size={16} />
                 )}
+                <span className="text-xs sm:text-sm font-medium">
+                  {copiedField === "upi" ? "Copied" : "Copy"}
+                </span>
               </button>
             </div>
 
